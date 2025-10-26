@@ -1,77 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dasar Privasi - APChat</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>APChat — Dasar Privasi</title>
+  <meta name="description" content="APChat Dasar Privasi" />
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #333;
+    :root{
+      --bg:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0ea5a4;
+      --maxw:900px;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    h1, h2 {
-      color: #222;
+    body{
+      background:var(--bg);
+      color:#0f172a;
+      margin:0;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 30px rgba(2,6,23,0.06);
+      padding:32px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:20px;
+    }
+    section{ margin:18px 0; line-height:1.55; font-size:15px; color:#0b1220; }
+    ul{ margin:8px 0 0 20px; }
+    a { color:var(--accent); text-decoration:underline; }
     footer {
       text-align: center;
       margin-top: 40px;
-      font-size: 0.9rem;
+      padding: 20px 0;
+      font-size: 14px;
       color: #777;
+      border-top: 1px solid #e0e0e0;
     }
-    a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .note{ font-size:13px; color:var(--muted); }
+    @media (max-width:520px){
+      .container{ padding:20px; border-radius:10px; }
     }
   </style>
 </head>
 <body>
+  <main class="container" role="main" aria-labelledby="privacy-title">
+    <header>
+      <h1 id="privacy-title">Dasar Privasi</h1>
+      <div class="meta">Kemaskini terakhir: Oktober 2025 — APChat</div>
+    </header>
 
-  <h1>Dasar Privasi</h1>
-  <p><strong>Kemaskini terakhir:</strong> 16 Oktober 2025</p>
+    <section aria-labelledby="intro">
+      <h2 style="font-size:16px;margin:0 0 8px 0">Pengenalan</h2>
+      <p id="intro">
+        Dasar Privasi ini menjelaskan bagaimana <strong>APChat</strong> (“kami”, “milik kami”) mengumpul, menggunakan, dan melindungi maklumat peribadi berkaitan aplikasi mudah alih APChat (“App”). Kami komited untuk melindungi privasi anda.
+      </p>
+    </section>
 
-  <p><strong>APChat</strong> (“kami”) mengendalikan aplikasi mudah alih APChat (“Aplikasi”). Dasar Privasi ini menerangkan bagaimana kami mengumpul, menggunakan dan melindungi maklumat peribadi anda. Kami komited untuk memastikan privasi anda dilindungi dan maklumat anda diurus dengan selamat.</p>
+    <section aria-labelledby="info">
+      <h3 style="margin:0 0 8px 0">1. Maklumat Yang Dikumpul</h3>
+      <p id="info">
+        Kami tidak mengumpul maklumat peribadi secara langsung dari pengguna. Semua akaun dikendalikan oleh pentadbir yang sah. Maklumat yang disimpan termasuk:
+      </p>
+      <ul>
+        <li>Email dan kata laluan yang diberikan oleh pentadbir</li>
+        <li>Mesej yang dihantar dan diterima dalam App</li>
+        <li>Maklumat profil terhad yang diberikan oleh pentadbir</li>
+      </ul>
+    </section>
 
-  <h2>1. Maklumat yang Kami Kumpul</h2>
-  <p>Kami tidak mengumpul maklumat peribadi secara langsung daripada pengguna. Semua akaun dicipta dan diurus oleh pentadbir yang diberi kuasa. Semasa penciptaan akaun, kami mungkin menyimpan maklumat berikut:</p>
-  <ul>
-    <li>Nombor telefon (untuk pengesahan identiti dan log masuk)</li>
-    <li>Nama pengguna dan butiran profil yang disediakan oleh pentadbir</li>
-  </ul>
+    <section aria-labelledby="use">
+      <h3 style="margin:0 0 8px 0">2. Cara Kami Menggunakan Maklumat</h3>
+      <p id="use">
+        Maklumat digunakan hanya untuk pengesahan selamat, memudahkan komunikasi, dan mengekalkan keselamatan sistem. Kami tidak menggunakan maklumat peribadi untuk tujuan pemasaran atau analisis.
+      </p>
+    </section>
 
-  <h2>2. Cara Kami Menggunakan Maklumat</h2>
-  <p>Maklumat yang disimpan dalam APChat digunakan semata-mata untuk membolehkan log masuk yang selamat dan ciri komunikasi dalam Aplikasi. Kami tidak menggunakan maklumat peribadi untuk pemasaran atau tujuan lain yang tidak berkaitan.</p>
+    <section aria-labelledby="push">
+      <h3 style="margin:0 0 8px 0">3. Pemberitahuan Tolak</h3>
+      <p id="push">
+        Kami mungkin menggunakan <strong>Firebase Cloud Messaging (FCM)</strong> untuk menghantar pemberitahuan. Firebase mungkin mengumpul data penggunaan bukan peribadi untuk memastikan penghantaran mesej. Tiada maklumat peribadi dikongsi melainkan yang diperlukan untuk fungsi perkhidmatan.
+      </p>
+    </section>
 
-  <h2>3. Pemberitahuan Tolak (Push Notification)</h2>
-  <p>Kami menggunakan <strong>Firebase Cloud Messaging (FCM)</strong> untuk menghantar pemberitahuan berkaitan aktiviti sembang dan kemas kini sistem. Firebase mungkin mengumpul data bukan peribadi bagi memastikan penghantaran mesej yang boleh dipercayai. Tiada maklumat peribadi pengguna dikongsi dengan Firebase selain yang diperlukan untuk fungsi ini.</p>
+    <section aria-labelledby="sharing">
+      <h3 style="margin:0 0 8px 0">4. Perkongsian Data</h3>
+      <p id="sharing">
+        Kami tidak berkongsi, menjual, atau menyewakan maklumat pengguna kepada pihak ketiga. Akses adalah terhad kepada pentadbir yang sah untuk tujuan operasi dalaman sahaja.
+      </p>
+    </section>
 
-  <h2>4. Perkongsian Data</h2>
-  <p>Kami tidak berkongsi, menjual atau menyewa data pengguna kepada mana-mana pihak ketiga. Akses kepada data pengguna hanya terhad kepada pentadbir yang diberi kuasa dalam organisasi dan digunakan untuk tujuan operasi dalaman sahaja.</p>
+    <section aria-labelledby="storage">
+      <h3 style="margin:0 0 8px 0">5. Penyimpanan dan Keselamatan Data</h3>
+      <p id="storage">
+        Data pengguna disimpan dengan selamat di pelayan kami. Langkah keselamatan teknikal dan organisasi yang wajar dilaksanakan untuk mengelakkan akses atau pendedahan tanpa kebenaran.
+      </p>
+    </section>
 
-  <h2>5. Penyimpanan dan Keselamatan Data</h2>
-  <p>Semua maklumat pengguna disimpan dengan selamat pada pelayan yang dikendalikan oleh organisasi kami. Kami melaksanakan langkah-langkah teknikal dan organisasi yang munasabah untuk mengelakkan akses tanpa kebenaran, pengubahan, pendedahan atau pemusnahan data.</p>
+    <section aria-labelledby="retention">
+      <h3 style="margin:0 0 8px 0">6. Tempoh Simpanan Data</h3>
+      <p id="retention">
+        Data disimpan hanya selagi perlu untuk keperluan komunikasi dalaman atau seperti yang dikehendaki oleh undang-undang. Apabila tidak lagi diperlukan, data akan dipadamkan atau dianonimkan dengan selamat.
+      </p>
+    </section>
 
-  <h2>6. Tempoh Penyimpanan Data</h2>
-  <p>Maklumat pengguna akan disimpan hanya selama tempoh yang diperlukan untuk tujuan komunikasi dalaman atau seperti yang dikehendaki oleh undang-undang yang berkenaan. Apabila tidak lagi diperlukan, data akan dipadam atau dinyahpengenalan dengan selamat.</p>
+    <section aria-labelledby="rights">
+      <h3 style="margin:0 0 8px 0">7. Hak Pengguna</h3>
+      <p id="rights">
+        Pengguna yang ingin menyemak, membetulkan, atau memadam maklumat mereka harus menghubungi pentadbir mereka. Kami akan menyokong permintaan tersebut sejauh yang dibenarkan oleh undang-undang.
+      </p>
+    </section>
 
-  <h2>7. Hak Pengguna</h2>
-  <p>Oleh kerana semua akaun dicipta oleh pentadbir, pengguna yang ingin mengemas kini, membetulkan, atau memadam maklumat mereka boleh menghubungi pentadbir masing-masing untuk bantuan. Kami akan membantu setakat mana yang dibenarkan oleh undang-undang.</p>
+    <section aria-labelledby="changes">
+      <h3 style="margin:0 0 8px 0">8. Perubahan Dasar Privasi</h3>
+      <p id="changes">
+        Kami mungkin mengemas kini Dasar Privasi ini dari semasa ke semasa. Versi terkini akan dipaparkan di sini dengan tarikh berkuat kuasa yang dikemas kini.
+      </p>
+    </section>
 
-  <h2>8. Perubahan kepada Dasar Ini</h2>
-  <p>Kami mungkin menyemak semula Dasar Privasi ini dari semasa ke semasa untuk mencerminkan perubahan operasi atau kehendak undang-undang. Versi terkini akan diterbitkan di halaman ini dengan tarikh berkuat kuasa yang dikemas kini.</p>
+    <section aria-labelledby="contact">
+      <h3 style="margin:0 0 8px 0">9. Hubungi Kami</h3>
+      <p id="contact">
+        Untuk sebarang pertanyaan mengenai Dasar Privasi ini, sila hubungi kami di <a href="mailto:support@adminpchat.com">support@adminpchat.com</a>.
+      </p>
+    </section>
 
-  <h2>9. Hubungi Kami</h2>
-  <p>Jika anda mempunyai sebarang pertanyaan mengenai Dasar Privasi ini atau cara kami menguruskan maklumat anda, sila hubungi kami di:</p>
-  <p><strong>E-mel:</strong> <a href="mailto:support@adminpchat.com">support@adminpchat.com</a></p>
-
-  <footer>
-    © 2025 APChat. Hak cipta terpelihara.
-  </footer>
+    <footer>
+      © 2025 APChat. Hak cipta terpelihara.
+    </footer>
+  </main>
 </body>
 </html>
